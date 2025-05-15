@@ -54,3 +54,24 @@ Network File System (NFS) allows remote directories to be accessed as if they we
 1. Install NFS server packages:
    ```bash
    sudo apt install nfs-kernel-server
+2. Create the directory to be shared, for example:
+   ```bash
+   sudo mkdir -p /PCACS_SERVER/Files
+
+
+
+
+
+Output and Verification
+Shared files will be accessible on the client machine’s mount directory.
+
+With sync enabled in export options, any file changes on the server reflect instantly on the client.
+
+File creation, deletion, and copy operations are synchronized in real-time.
+
+Check /var/log/nfs_transfer.log for detailed logs and error reports.
+
+
+Conclusion
+This project demonstrates how Linux shell scripting can automate and simplify complex system administration tasks like NFS configuration. By automating mounting, file transfers, and cleanup, it reduces manual effort, human error, and setup time — making NFS more accessible for both beginners and IT professionals. It provides a scalable, flexible solution for reliable network file sharing in diverse environments.
+
